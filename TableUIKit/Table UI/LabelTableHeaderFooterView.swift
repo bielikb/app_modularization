@@ -25,7 +25,7 @@ public class LabelTableHeaderFooterView : TableHeaderFooterView {
     
     public var bottomIndent: CGFloat = 9 {
         didSet {
-            bottomConstraint?.constant = 9
+            bottomConstraint?.constant = bottomIndent
         }
     }
     
