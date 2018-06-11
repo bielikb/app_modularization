@@ -8,13 +8,13 @@
 
 import Foundation
 
-protocol Identifier : class {
+public protocol Identifier : class {
     static var identifier: String {get}
 }
 
 extension Identifier where Self:NSObject {
     
-    static var identifier: String {
+    static public var identifier: String {
         return self.className
     }
 }

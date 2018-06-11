@@ -10,5 +10,5 @@ import Foundation
 import UIKit
 
 @objcMembers
-class TableViewCell : UITableViewCell, Identifier {
+public class TableViewCell : UITableViewCell, Identifier {
 }

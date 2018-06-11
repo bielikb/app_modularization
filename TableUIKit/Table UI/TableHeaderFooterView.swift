@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 
 @objcMembers
-class TableHeaderFooterView : UITableViewHeaderFooterView, Identifier {
+public class TableHeaderFooterView : UITableViewHeaderFooterView, Identifier {
     
     /// dequeue header
-    class func dequeueHeaderFooterView<T: TableHeaderFooterView>(in tableView: UITableView, withIdentifier identifier: String) -> T? {
+    public class func dequeueHeaderFooterView<T: TableHeaderFooterView>(in tableView: UITableView, withIdentifier identifier: String) -> T? {
         return tableView.dequeueReusableHeaderFooterView(withIdentifier: identifier) as? T
     }
 }

@@ -9,11 +9,11 @@
 import Foundation
 import UIKit
 
-class LabelTableViewCell : TableViewCell {
-    @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
+public class LabelTableViewCell : TableViewCell {
+    @IBOutlet weak public var label: UILabel!
+    @IBOutlet weak public var leadingConstraint: NSLayoutConstraint!
     
-    var leftIndent: CGFloat = 15 {
+    public var leftIndent: CGFloat = 15 {
         didSet {
             leadingConstraint.constant = leftIndent
         }

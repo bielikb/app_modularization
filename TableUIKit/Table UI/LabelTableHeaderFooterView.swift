@@ -10,27 +10,27 @@ import Foundation
 import UIKit
 
 @objcMembers
-class LabelTableHeaderFooterView : TableHeaderFooterView {
+public class LabelTableHeaderFooterView : TableHeaderFooterView {
     
-    @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var bottomConstraint: NSLayoutConstraint?
-    @IBOutlet weak var leadingConstraint: NSLayoutConstraint?
+    @IBOutlet weak public var label: UILabel!
+    @IBOutlet weak public var bottomConstraint: NSLayoutConstraint?
+    @IBOutlet weak public var leadingConstraint: NSLayoutConstraint?
     
     // left indent
-    var leftIndent: CGFloat = 15 {
+    public var leftIndent: CGFloat = 15 {
         didSet {
             leadingConstraint?.constant = leftIndent
         }
     }
     
-    var bottomIndent: CGFloat = 9 {
+    public var bottomIndent: CGFloat = 9 {
         didSet {
             bottomConstraint?.constant = 9
         }
     }
     
     //reuse view and set title
-    class func dequeueHeaderFooterView(
+    class public func dequeueHeaderFooterView(
         in tableView: UITableView,
         withIdentifier identifier: String = LabelTableHeaderFooterView.identifier,
         withTitle title: String) -> LabelTableHeaderFooterView? {

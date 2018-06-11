@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TableUIKit
 
 //Section data
 struct Section {
@@ -30,10 +31,10 @@ class ViewController: UIViewController {
     }
     
     private func setupTableView() {
-        let headerNib = UINib(nibName: LabelTableHeaderFooterView.className, bundle: nil)
+        let headerNib = UINib(nibName: LabelTableHeaderFooterView.className, bundle: Bundle(for: LabelTableHeaderFooterView.self))
         tableView.register(headerNib, forHeaderFooterViewReuseIdentifier: LabelTableHeaderFooterView.identifier)
         
-        let cellNib = UINib(nibName: LabelTableViewCell.className, bundle: nil)
+        let cellNib = UINib(nibName: LabelTableViewCell.className, bundle: Bundle(for: LabelTableViewCell.self))
         tableView.register(cellNib, forCellReuseIdentifier: LabelTableViewCell.identifier)
         
         tableView.rowHeight = 50
